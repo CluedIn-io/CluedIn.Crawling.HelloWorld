@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ProjectGuid>{8F3EF0B2-A6CA-4426-919D-5E0B26F8366B}</ProjectGuid>
+    <TargetFramework>net452</TargetFramework>
+    <AssemblyTitle>Tests.Integration.HelloWorld</AssemblyTitle>
+    <Product>Tests.Integration.HelloWorld</Product>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="CluedIn.Core" Version="2.18.0-alpha0846" />
+    <PackageReference Include="CluedIn.Crawling" Version="2.18.0-alpha0846" />
+    <PackageReference Include="CrawlerIntegrationTesting" Version="1.1.1" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
+    <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="System.IO.Compression" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\src\HelloWorld.Core\Crawling.HelloWorld.Core.csproj" />
+    <ProjectReference Include="..\..\..\src\HelloWorld.Crawling\Crawling.HelloWorld.csproj" />
+    <ProjectReference Include="..\..\..\src\HelloWorld.Infrastructure\Crawling.HelloWorld.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\src\HelloWorld.Provider\Provider.HelloWorld.csproj" />
+  </ItemGroup>
+</Project>
