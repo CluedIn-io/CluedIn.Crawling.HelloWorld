@@ -12,10 +12,11 @@ using CluedIn.Core.Configuration;
 using CluedIn.Crawling.HelloWorld.Core;
 using CluedIn.Crawling.HelloWorld.Infrastructure.Factories;
 using CluedIn.Providers.Models;
+using Newtonsoft.Json;
 
 namespace CluedIn.Provider.HelloWorld
 {
-    public class HelloWorldProvider : ProviderBase
+    public class HelloWorldProvider : ProviderBase, IExtendedProviderMetadata
     {
         private readonly IHelloWorldClientFactory _helloworldClientFactory;
 
@@ -138,5 +139,23 @@ namespace CluedIn.Provider.HelloWorld
             //There is no limit set, so you can pull as often and as much as you want.
             return await Task.FromResult(new CrawlLimit(-1, TimeSpan.Zero));
         }
+
+        public string Icon => HelloWorldConstants.IconResourceName;
+        public string Domain { get; } = HelloWorldConstants.Uri;
+        public string About { get; } = HelloWorldConstants.CrawlerDescription;
+        public string AuthMethods { get; } = "";
+        public string Properties { get; } = null;
+        public string ServiceType { get; } = JsonConvert.SerializeObject(HelloWorldConstants.ServiceType);
+        public string Aliases { get; } = JsonConvert.SerializeObject(HelloWorldConstants.Aliases);
+        public Guide Guide { get; set; } = new Guide {
+            Instructions = HelloWorldConstants.Instructions,
+            Value = new List<string> { HelloWorldConstants.CrawlerDescription },
+            Details = HelloWorldConstants.Details
+
+        };
+
+        public string Details { get; set; } = HelloWorldConstants.Details;
+        public string Category { get; set; } = HelloWorldConstants.Category;
+        public new string Type { get; set; } = HelloWorldConstants.Type;
     }
 }

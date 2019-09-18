@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <ProjectGuid>{8F3EF0B2-A6CA-4426-919D-5E0B26F8366B}</ProjectGuid>
     <TargetFramework>net452</TargetFramework>
@@ -13,9 +13,9 @@
     <DebugType>pdbonly</DebugType>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="CluedIn.Core" Version="2.18.0-alpha0846" />
-    <PackageReference Include="CluedIn.Crawling" Version="2.18.0-alpha0846" />
-    <PackageReference Include="CrawlerIntegrationTesting" Version="1.1.1" />
+    <PackageReference Include="CluedIn.Core" Version="2.4.0-alpha0087" />
+    <PackageReference Include="CluedIn.Crawling" Version="2.4.0-alpha0087" />
+    <PackageReference Include="CrawlerIntegrationTesting" Version="1.1.5" />
     <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
     <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />

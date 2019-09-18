@@ -14,10 +14,10 @@ namespace CluedIn.Crawling.HelloWorld.Vocabularies
 
             this.AddGroup("HelloWorld Details", group =>
               {
-                  this.Id = group.Add(new VocabularyKey("Id", VocabularyKeyDataType.Integer, VocabularyKeyVisiblity.Visible));
-                  this.Name = group.Add(new VocabularyKey("Name", VocabularyKeyDataType.PersonName, VocabularyKeyVisiblity.Visible));
-                  this.Username = group.Add(new VocabularyKey("Username", VocabularyKeyDataType.PersonName, VocabularyKeyVisiblity.Visible));
-                  this.Email = group.Add(new VocabularyKey("Email", VocabularyKeyDataType.Email, VocabularyKeyVisiblity.Hidden));
+                  this.Id = group.Add(new VocabularyKey("Id", VocabularyKeyDataType.Integer, VocabularyKeyVisibility.Visible));
+                  this.Name = group.Add(new VocabularyKey("Name", VocabularyKeyDataType.PersonName, VocabularyKeyVisibility.Visible));
+                  this.Username = group.Add(new VocabularyKey("Username", VocabularyKeyDataType.PersonName, VocabularyKeyVisibility.Visible));
+                  this.Email = group.Add(new VocabularyKey("Email", VocabularyKeyDataType.Email, VocabularyKeyVisibility.Hidden));
               });
 
         }
